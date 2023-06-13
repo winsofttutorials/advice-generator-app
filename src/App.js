@@ -1,33 +1,30 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
+import dice from "./components/images/icon-dice.svg";
 import AdviceApp from "./components/AdviceApp/AdviceApp";
 
 const API_URL = "https://api.adviceslip.com/advice";
-const addv1 = {
-  id: 132,
-  advice: "Repeat people's names when you meet them.",
-};
 const App = () => {
-  const [advices, setAdvice] = useState([]);
+  const [advices, setAdvices] = useState([]);
 
-  const myAdvice = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
+  const myAdvice = async (url) => {
+    const response = await fetch(url);
     const data = await response.json();
-
-    setAdvice(data.slip.advice);
+    setAdvices(data.slip);
   };
 
   useEffect(() => {
-    myAdvice("Repeat people's names when you meet them.");
-  }, [advices]);
+    myAdvice(API_URL);
+  }, []);
 
   return (
     <>
       <div className="container">
-        {advices.forEach((advice) => {
-          <AdviceApp advice={advice} />;
-        })}
+        <AdviceApp advices={advices} />
+        <button className="button">
+          <img src={dice} alt="icon-dice" onClick={() => myAdvice(API_URL)} />
+        </button>
       </div>
     </>
   );
