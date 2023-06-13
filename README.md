@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/winsofttutorials/advice-generator-app.git](
+- Live Site URL: [https://winsofttutorials.github.io/advice-generator-app/]
 
 ## My process
 
@@ -89,7 +89,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [https://winsofttutorials.github.io/advice-generator-app/]
 - Frontend Mentor - [@winsofttutorials](https://www.frontendmentor.io/profile/winsofttutorials)
 - Twitter - [@IFIDIKUROEPHOD](https://www.twitter.com/IFIDIKUROEPHOD)
 
